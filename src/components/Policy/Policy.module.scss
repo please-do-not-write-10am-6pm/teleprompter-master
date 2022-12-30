@@ -1,0 +1,93 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/paragraph';
+
+.aboutWrapper {
+	&.about {
+		background: transparent;
+	}
+
+	.dark,
+	&.dark,
+	{
+		background: rgba($color: $gray-2, $alpha: 1.0);
+	}
+
+	.middle {
+		padding: 50px 20px;
+		.textContainer {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			max-width: 620px;
+			margin-left: auto;
+			margin-right: auto;
+
+			.title {
+					@include paragraph(60px, #ffffff, 0.39px);
+					margin-bottom: 20px;
+				}
+			}
+
+		.buttonContainer {
+			padding: 50px 20px;
+			padding-top: 0;
+			max-width: 620px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	p {
+		@include paragraph(15px, #ffffff, 0.39px);
+		line-height: 1.7;
+		margin: 10px 0;
+		ul {
+			list-style-type: none;
+		}
+
+		a {
+			color: $purple;
+			text-decoration: none;
+			margin-left: 3px;
+
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	h1 {
+		@include paragraph(20px, $purple, 0.39px);
+		line-height: 1.7;
+		margin: 10px 0;
+		font-weight: 300;
+	}
+}
+
+
+.closeBtnContainer {
+	display: flex;
+	justify-content: flex-end;
+
+	&.policyBtn {
+		max-width: 620px;
+		margin: 0 auto;
+	}
+
+	.closeBtn {
+		background: none;
+		border: 0;
+		margin: 0;
+		padding: 0;
+		box-shadow: 0;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

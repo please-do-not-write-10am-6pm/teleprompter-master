@@ -1,0 +1,33 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/paragraph.scss';
+
+.instructionContainer {
+    margin: 0 50px;
+    padding: 20px;
+    padding-right: 0;
+    margin-right: 20px;
+
+    p {
+        @include paragraph(14px, $gray-4);
+        letter-spacing: 0.42px;
+    }
+
+    span {
+        margin-left: 4px;
+        color: #ffffff;
+        &:hover {
+            color: $purple;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.noPadding {
+        padding: 0;
+        margin-left: 0;
+    }
+}

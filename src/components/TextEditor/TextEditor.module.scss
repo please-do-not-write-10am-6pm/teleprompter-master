@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/paragraph';
+
+.textEditorContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

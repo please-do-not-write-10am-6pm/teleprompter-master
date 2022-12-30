@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.mobileContainer {
+	background: rgba($color: $gray-3, $alpha: 1);
+
+	.mobileLogo {
+		padding-bottom: 60px;
+	}
+
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	.innerContainer {
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		span {
+			text-align: center;
+		}
+
+		.goBtn {
+			width: 85px;
+			height: 45px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			button {
+				width: inherit;
+				height: inherit;
+				min-width: unset;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+		}
+
+		.input {
+			margin: 0;
+		}
+	}
+}

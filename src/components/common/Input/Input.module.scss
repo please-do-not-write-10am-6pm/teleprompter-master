@@ -1,0 +1,38 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/paragraph';
+
+.inputContainer {
+    margin: 30px 0;
+
+    .label {
+        display: flex;
+        flex-direction: column;
+        @include paragraph(14px, #fff, 0.39px);
+
+        .labelText {
+            margin-bottom: 10px;
+            display: flex;
+        }
+        
+        div {
+            margin-left: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .input {
+
+            &:focus {
+                outline: none;
+            }
+
+            border: none;
+            border-radius: $border-radius;
+            background: $gray-1;
+            width: 220px;
+            height: 45px;
+            @include paragraph(14px, $gray-4, 0.39px);
+            padding-left: 20px;
+        }
+    }
+}

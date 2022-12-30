@@ -1,0 +1,122 @@
+{
+  "name": "teleprompter",
+  "version": "2.1.0",
+  "private": true,
+  "author": {
+    "name": "Richard Zilahi",
+    "email": "zilahi@gmail.com",
+    "url": "https://richardzilahi.hu"
+  },
+  "engines": {
+    "node": ">=12 < 15"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.20",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@popmotion/popcorn": "^0.4.4",
+    "@zilahir/use-socket.io-client": "^1.2.0",
+    "array-move": "^3.0.1",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "env-cmd": "^10.1.0",
+    "framer-motion": "^4.0.3",
+    "hex-to-rgba": "^2.0.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
+    "random": "^2.2.0",
+    "rc-slider": "^9.2.3",
+    "react": "^17.0.1",
+    "react-autosize-textarea": "^7.1.0",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-color": "^2.18.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^16.13.1",
+    "react-ga": "^3.3.0",
+    "react-grid-system": "^7.1.2",
+    "react-helmet": "^6.0.0",
+    "react-icons-kit": "^1.3.1",
+    "react-intersection-observer": "^8.26.1",
+    "react-keyboard-event-handler": "^1.5.4",
+    "react-loading": "^2.0.3",
+    "react-mde": "^11.0.6",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.7.9",
+    "react-svg-morph": "^0.2.1",
+    "react-toggle": "^4.1.2",
+    "react-waypoint": "^9.0.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "shortid": "^2.2.15",
+    "styled-components": "^5.2.0",
+    "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "cm": "cz",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-production": "env-cmd -f config/.env.prod react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write",
+    "lint:js": "eslint --ext .js,.jsx .",
+    "lint:scss": "stylelint"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "github:semantic-release/npm",
+    "@semantic-release/release-notes-generator": "^9.0.2",
+    "@typescript-eslint/parser": "^4.19.0",
+    "@zilahir/eslint-config": "^1.0.1",
+    "@zilahir/stylelint-config": "^3.0.7",
+    "commitizen": "^4.2.3",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.4.2",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.2.1",
+    "sass-loader": "^10.0.2",
+    "semantic-release": "^17.4.2",
+    "yarn": "^1.17.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "yarn lint:js",
+      "git add"
+    ]
+  },
+  "eslint-plugin-jsx-a11y": "^6.2.3"
+}

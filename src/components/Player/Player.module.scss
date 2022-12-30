@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/paragraph';
+
+.app {
+    display: grid;
+    padding: 2.5em;
+    text-align: center;
+    justify-items: center;
+}
+
+.controls {
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-column-gap: 1em;
+}
+
+.githubLink {
+    font-size: xx-large;
+}
+
+.header {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.playerHeader {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 70px;
+    align-items: center;
+    background-color: rgba($color: $gray-5, $alpha: 1.0);
+    padding: 10px 0;
+    position: relative;
+    z-index: 2;
+
+    .innerContainer {
+        width: calc(100% - 40px);
+        display: flex;
+        justify-content: center;
+
+        div {
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        p {
+            @include paragraph(14px, $gray-4, 0);
+            &.shorten {
+                width: 80%;
+            }
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .updateBtnContainer {
+            .updateBtn {
+                button {
+                    width: 130px;
+                    height: 45px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins/label';
+
+.sliderContainer {
+    width: 185px;
+    margin-bottom: 10px;
+}
+
+.slider {
+    display: block;
+    .rc-slider-step {
+        background: $gray-1;
+        border-radius: 24px;
+        height: 5px;
+    }
+    .rc-slider-handle {
+        width: 20px;
+        height: 20px;
+        background: $purple;
+        border: none;
+        margin-top: -8px;
+        box-shadow: 0 0 0 5px $gray-2;
+        &:focus {
+            box-shadow: 0 0 0 5px $gray-2;
+        }
+    }
+    .rc-slider-track {
+        height: unset;
+    }
+}
+
+.labelText {
+    @include labelText;
+    margin-left: -10px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.sliderInner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    .sliderValue {
+        position: relative;
+        right: -10px;
+        margin-left: 10px;
+        color: #fff;
+        font: 400 14px/17px 'Barlow';
+    }
+}
+
+.rc-slider-rail {
+    background-color: unset;
+}

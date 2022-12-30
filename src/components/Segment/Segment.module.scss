@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+@import '../../styles/mixins/paragraph';
+
+.oneSegment {
+	display: flex;
+	padding: 5px;
+	border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    flex-direction: column;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    .segmentHeader {
+        margin-top: 4px;
+
+        .segmentName {
+            border-radius: $border-radius;
+            margin: 0;
+            height: 30px;
+            display: flex;
+            flex: 1;
+            margin-right: 10px;
+
+            label {
+                height: 100%;
+                width: 100%;
+                input {
+                    @include paragraph(14px, #ffffff, 0.42px);
+                    width: 100%;
+                    background: rgba($color: $gray-2, $alpha: 1);
+                    padding: 10px;
+                }
+            }
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 70px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            top: 3px;
+            
+            li {
+                display: flex;
+                align-items: center;
+
+                .segmentColorIndicator {
+                    width: 16px;
+                    height: 16px;
+                    display: block;
+                    border-radius: 100%;
+                    margin: 0 10px;
+                }
+
+                .deleteBtn {
+                    color: #ffffff;
+                    background: none;
+                    box-shadow: none;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    font-size: unset;
+                    width: 24px;
+                    height: 24px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .segmentBody {
+        margin-top: 10px;
+
+        .segmentText {
+            @include paragraph(14px, #ffffff, 0.42px)
+            resize: none;
+            border: 0;
+            background: rgba($color: $gray-2, $alpha: 1);
+            width: calc(100% - 20px);
+            padding: 10px;
+            min-height: fit-content;
+            border-radius: $border-radius;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
